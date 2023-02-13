@@ -1,0 +1,81 @@
+.bg-container {
+  height: 100vh;
+  display: flex;
+  background-color: #000000;
+}
+.form-container {
+  background-color: #131213;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.heading {
+  font-family: Roboto;
+  font-size: 25px;
+  color: #f3aa4e;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding-bottom: 25px;
+}
+.input-container {
+  margin-bottom: 20px;
+}
+label {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+}
+.input {
+  width: 300px;
+  height: 40px;
+  border: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  outline: none;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #323f4b;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.btn-add {
+  background-color: #f3aa4e;
+  width: 100px;
+  height: 35px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.tasks-view-container{
+    width: 60%;
+    padding: 20px:
+}
+.tags-list{
+    padding-left: 0px;
+    display: flex;
+    list-style-type: none;
+}
+.sub-heading{
+    font-family: Roboto;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0px;
+    padding-bottom: 15px;
+}
+.tasks-list{
+    padding-left: none;
+    list-style-type: none;
+}
