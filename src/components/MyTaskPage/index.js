@@ -127,3 +127,122 @@ class MyTaskPage extends Component {
 }
 
 export default MyTaskPage
+
+
+
+//login - ebank
+import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
+import Cookies from 'js-cookie'
+
+class Login extends Component {
+  state = {errorMsg: '', userId: '', pin: '',showError: false}
+
+  onChangeUserId = event => {
+    this.setState({userId: event.target.value})
+  }
+
+  onChangePin = event => {
+    this.setState({pin: event.target.value})
+  }
+
+  render() {
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
+    return (
+      <div className="login-main-container">
+        <div className="login-bg-container">
+          <img
+            className="login-img"
+            src="https://assets.ccbp.in/frontend/react-js/ebank-login-img.png"
+            alt="website login"
+          />
+          <form className="login-form">
+            <h1 className="form-heading">Welcome back!</h1>
+            <div className="input-container">
+              <label htmlFor="userId">User ID</label>
+              <input
+                id="userId"
+                type="text"
+                placeholder="Enter User ID"
+                onChange={this.onChangeUserId}
+              />
+            </div>
+            <div className="input-container">
+              <label htmlFor="pin">PIN</label>
+              <input
+                type="password"
+                id="pin"
+                placeholder="Enter PIN"
+                onChange={this.onChangePin}
+              />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Login
+
+
+/login -ebank  css
+.login-main-container {
+  background-color: #152850;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-bg-container {
+  width: 900px;
+  height: 60vh;
+  background-color: #e0eefe;
+  border-radius: 10px;
+  display: flex;
+}
+.login-img {
+  width: 50%;
+  padding: 10px;
+}
+.login-form {
+  background-color: #ffffff;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  display: column;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-heading {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #183b56;
+  margin: 0px;
+  padding-bottom: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+label {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #c3cad9;
+}
+input {
+  border: 1px solid #c3cad9;
+  background-color: transparent;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+}
